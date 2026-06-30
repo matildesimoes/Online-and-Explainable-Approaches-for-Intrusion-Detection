@@ -1,0 +1,352 @@
+
+Call:
+C5.0.default(x = x_train, y = y_train, trials = 1, rules = TRUE)
+
+
+C5.0 [Release 2.07 GPL Edition]  	Fri May 29 13:40:51 2026
+-------------------------------
+
+Class specified by attribute `outcome'
+
+Read 15780 cases (42 attributes) from undefined.data
+
+Rules:
+
+Rule 1: (5251/5, lift 2.4)
+	dst_bytes > 58
+	root_shell <= 0
+	is_guest_login <= 0
+	count <= 192
+	srv_count <= 212
+	serror_rate <= 0.22
+	rerror_rate <= 0.22
+	diff_srv_rate <= 0.08
+	srv_diff_host_rate <= 0.6
+	dst_host_srv_count > 125
+	dst_host_same_src_port_rate <= 0.14
+	dst_host_serror_rate <= 0.03
+	dst_host_rerror_rate <= 0.33
+	->  class 0  [0.999]
+
+Rule 2: (4859/13, lift 2.4)
+	duration <= 10
+	dst_bytes > 58
+	root_shell <= 0
+	is_guest_login <= 0
+	serror_rate <= 0.22
+	srv_rerror_rate <= 0.36
+	diff_srv_rate <= 0.08
+	srv_diff_host_rate <= 0.26
+	dst_host_same_src_port_rate <= 0.41
+	dst_host_srv_diff_host_rate <= 0.11
+	dst_host_serror_rate <= 0.03
+	dst_host_srv_serror_rate <= 0
+	dst_host_rerror_rate <= 0.33
+	protocol_type = tcp
+	->  class 0  [0.997]
+
+Rule 3: (148, lift 2.4)
+	dst_bytes <= 58
+	count <= 117
+	same_srv_rate > 0.89
+	srv_diff_host_rate <= 0.63
+	dst_host_count > 160
+	dst_host_same_src_port_rate <= 0.31
+	service in {domain_u, ntp_u, urp_i}
+	->  class 0  [0.993]
+
+Rule 4: (5030/62, lift 2.4)
+	dst_bytes > 58
+	root_shell <= 0
+	is_guest_login <= 0
+	count <= 192
+	serror_rate <= 0.22
+	srv_rerror_rate <= 0.36
+	diff_srv_rate <= 0.08
+	srv_diff_host_rate <= 0.18
+	dst_host_diff_srv_rate <= 0.05
+	dst_host_same_src_port_rate <= 0.41
+	dst_host_srv_diff_host_rate <= 0.26
+	dst_host_rerror_rate <= 0.33
+	->  class 0  [0.987]
+
+Rule 5: (129/1, lift 2.4)
+	dst_bytes > 7
+	dst_bytes <= 58
+	srv_count <= 21
+	diff_srv_rate <= 0.38
+	srv_diff_host_rate <= 0.1
+	dst_host_count > 126
+	dst_host_diff_srv_rate <= 0.06
+	dst_host_serror_rate <= 0.32
+	flag = SF
+	->  class 0  [0.985]
+
+Rule 6: (38/2, lift 2.2)
+	diff_srv_rate <= 0.38
+	dst_host_count > 70
+	dst_host_srv_count <= 26
+	dst_host_same_srv_rate <= 0.15
+	dst_host_diff_srv_rate <= 0.06
+	dst_host_serror_rate <= 0.32
+	service = ftp_data
+	flag = SF
+	->  class 0  [0.925]
+
+Rule 7: (6740/731, lift 2.1)
+	diff_srv_rate <= 0.38
+	dst_host_diff_srv_rate <= 0.06
+	dst_host_same_src_port_rate <= 0.31
+	dst_host_serror_rate <= 0.32
+	service in {auth, domain, eco_i, ecr_i, finger, ftp, ftp_data, http,
+                    imap4, IRC, other, pop_3, private, smtp, telnet, tim_i,
+                    time, X11}
+	flag = SF
+	->  class 0  [0.891]
+
+Rule 8: (339/131, lift 1.5)
+	dst_bytes <= 58
+	service in {domain_u, ntp_u, urp_i}
+	->  class 0  [0.613]
+
+Rule 9: (3472, lift 1.7)
+	dst_bytes <= 7
+	dst_host_srv_rerror_rate > 0.27
+	->  class 1  [1.000]
+
+Rule 10: (4293/1, lift 1.7)
+	same_srv_rate <= 0.89
+	dst_host_count > 160
+	dst_host_same_srv_rate <= 0.83
+	->  class 1  [1.000]
+
+Rule 11: (3267, lift 1.7)
+	dst_bytes <= 58
+	count > 117
+	dst_host_same_srv_rate <= 0.83
+	->  class 1  [1.000]
+
+Rule 12: (2503, lift 1.7)
+	count > 151
+	dst_host_same_srv_rate <= 0.94
+	->  class 1  [1.000]
+
+Rule 13: (3808, lift 1.7)
+	rerror_rate > 0.54
+	->  class 1  [1.000]
+
+Rule 14: (3449, lift 1.7)
+	dst_host_srv_rerror_rate > 0.59
+	->  class 1  [1.000]
+
+Rule 15: (2839, lift 1.7)
+	count > 192
+	->  class 1  [1.000]
+
+Rule 16: (3848, lift 1.7)
+	srv_rerror_rate > 0.36
+	->  class 1  [1.000]
+
+Rule 17: (4005, lift 1.7)
+	dst_host_rerror_rate > 0.33
+	->  class 1  [1.000]
+
+Rule 18: (859, lift 1.7)
+	dst_bytes <= 58
+	dst_host_count <= 117
+	dst_host_same_srv_rate > 0.15
+	protocol_type in {icmp, tcp}
+	->  class 1  [0.999]
+
+Rule 19: (1379, lift 1.7)
+	diff_srv_rate > 0.38
+	->  class 1  [0.999]
+
+Rule 20: (1706, lift 1.7)
+	dst_host_serror_rate > 0.32
+	->  class 1  [0.999]
+
+Rule 21: (1849, lift 1.7)
+	dst_bytes <= 58
+	dst_host_same_src_port_rate > 0.31
+	->  class 1  [0.999]
+
+Rule 22: (691, lift 1.7)
+	dst_host_same_src_port_rate > 0.3
+	protocol_type = udp
+	->  class 1  [0.999]
+
+Rule 23: (854, lift 1.7)
+	srv_diff_host_rate > 0.31
+	dst_host_srv_count <= 125
+	->  class 1  [0.999]
+
+Rule 24: (815, lift 1.7)
+	dst_bytes <= 58
+	dst_host_count <= 200
+	dst_host_same_srv_rate > 0.27
+	protocol_type in {icmp, tcp}
+	->  class 1  [0.999]
+
+Rule 25: (1522, lift 1.7)
+	dst_host_serror_rate > 0.03
+	dst_host_srv_serror_rate > 0.51
+	->  class 1  [0.999]
+
+Rule 26: (1585, lift 1.7)
+	serror_rate > 0.22
+	srv_serror_rate > 0.29
+	->  class 1  [0.999]
+
+Rule 27: (1990, lift 1.7)
+	dst_host_same_src_port_rate > 0.41
+	->  class 1  [0.999]
+
+Rule 28: (670, lift 1.7)
+	logged_in <= 0
+	srv_diff_host_rate > 0.6
+	->  class 1  [0.999]
+
+Rule 29: (947, lift 1.7)
+	srv_diff_host_rate > 0.67
+	->  class 1  [0.999]
+
+Rule 30: (512, lift 1.7)
+	rerror_rate > 0.22
+	srv_diff_host_rate > 0.38
+	->  class 1  [0.998]
+
+Rule 31: (467, lift 1.7)
+	dst_bytes <= 58
+	dst_host_count <= 70
+	dst_host_diff_srv_rate <= 0.06
+	protocol_type in {icmp, tcp}
+	->  class 1  [0.998]
+
+Rule 32: (608, lift 1.7)
+	srv_count > 226
+	->  class 1  [0.998]
+
+Rule 33: (648, lift 1.7)
+	srv_diff_host_rate > 0.6
+	dst_host_count <= 172
+	->  class 1  [0.998]
+
+Rule 34: (3127/5, lift 1.7)
+	dst_bytes <= 58
+	dst_host_diff_srv_rate > 0.06
+	->  class 1  [0.998]
+
+Rule 35: (439, lift 1.7)
+	is_guest_login > 0
+	->  class 1  [0.998]
+
+Rule 36: (361, lift 1.7)
+	dst_bytes <= 58
+	dst_host_count <= 126
+	dst_host_srv_count > 26
+	dst_host_diff_srv_rate <= 0.06
+	protocol_type in {icmp, tcp}
+	->  class 1  [0.997]
+
+Rule 37: (292, lift 1.7)
+	duration > 10
+	dst_host_diff_srv_rate > 0.09
+	->  class 1  [0.997]
+
+Rule 38: (233, lift 1.7)
+	srv_diff_host_rate > 0.38
+	dst_host_same_src_port_rate > 0.14
+	->  class 1  [0.996]
+
+Rule 39: (230, lift 1.7)
+	dst_host_srv_diff_host_rate > 0.26
+	->  class 1  [0.996]
+
+Rule 40: (215, lift 1.7)
+	srv_diff_host_rate > 0.26
+	dst_host_same_src_port_rate > 0.29
+	->  class 1  [0.995]
+
+Rule 41: (108, lift 1.7)
+	duration > 10
+	dst_bytes > 58
+	dst_host_serror_rate > 0.01
+	->  class 1  [0.991]
+
+Rule 42: (94, lift 1.7)
+	dst_host_same_src_port_rate > 0.29
+	dst_host_srv_serror_rate > 0
+	->  class 1  [0.990]
+
+Rule 43: (46, lift 1.7)
+	root_shell > 0
+	->  class 1  [0.979]
+
+Rule 44: (407/11, lift 1.7)
+	duration <= 10
+	dst_host_srv_count <= 67
+	protocol_type = udp
+	->  class 1  [0.971]
+
+Rule 45: (482/28, lift 1.6)
+	dst_host_srv_diff_host_rate > 0.11
+	->  class 1  [0.940]
+
+Rule 46: (463/29, lift 1.6)
+	duration <= 10
+	dst_host_srv_count <= 125
+	protocol_type = udp
+	->  class 1  [0.935]
+
+Default class: 0
+
+
+Evaluation on training data (15780 cases):
+
+	        Rules     
+	  ----------------
+	    No      Errors
+
+	    46   55( 0.3%)   <<
+
+
+	   (a)   (b)    <-classified as
+	  ----  ----
+	  6564    18    (a): class 0
+	    37  9161    (b): class 1
+
+
+	Attribute usage:
+
+	 83.13%	dst_bytes
+	 68.76%	dst_host_diff_srv_rate
+	 62.86%	dst_host_rerror_rate
+	 62.70%	count
+	 59.33%	dst_host_same_src_port_rate
+	 59.06%	srv_rerror_rate
+	 57.67%	rerror_rate
+	 56.55%	dst_host_serror_rate
+	 54.02%	diff_srv_rate
+	 47.53%	serror_rate
+	 47.00%	srv_diff_host_rate
+	 44.86%	service
+	 43.00%	dst_host_srv_count
+	 42.80%	flag
+	 42.14%	protocol_type
+	 40.65%	dst_host_srv_serror_rate
+	 40.27%	is_guest_login
+	 37.95%	srv_count
+	 37.78%	root_shell
+	 37.60%	dst_host_srv_diff_host_rate
+	 37.16%	dst_host_count
+	 36.20%	duration
+	 34.07%	dst_host_same_srv_rate
+	 28.14%	same_srv_rate
+	 23.86%	dst_host_srv_rerror_rate
+	 10.04%	srv_serror_rate
+	  4.25%	logged_in
+
+
+Time: 0.3 secs
+

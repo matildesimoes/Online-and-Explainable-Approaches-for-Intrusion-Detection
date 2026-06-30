@@ -1,0 +1,12 @@
+
+Call:
+C5.0.default(x = x_train, y = y_train, trials = 1, rules = FALSE)
+
+Classification Tree
+Number of samples: 15780 
+Number of predictors: 41 
+
+Tree size: 86 
+
+Non-standard options: attempt to group attributes
+
