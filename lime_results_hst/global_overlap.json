@@ -1,0 +1,42 @@
+{
+  "top_n": 20,
+  "common": [
+    "diff_srv_rate",
+    "dst_host_rerror_rate",
+    "dst_host_same_src_port_rate",
+    "is_guest_login",
+    "rerror_rate",
+    "root_shell",
+    "serror_rate",
+    "srv_diff_host_rate",
+    "srv_rerror_rate"
+  ],
+  "only_c50": [
+    "count",
+    "dst_bytes",
+    "dst_host_diff_srv_rate",
+    "dst_host_serror_rate",
+    "dst_host_srv_count",
+    "dst_host_srv_diff_host_rate",
+    "duration",
+    "flag",
+    "protocol_type",
+    "service",
+    "srv_count"
+  ],
+  "only_lime": [
+    "dst_host_count",
+    "dst_host_srv_rerror_rate",
+    "dst_host_srv_serror_rate",
+    "is_host_login",
+    "land",
+    "num_shells",
+    "same_srv_rate",
+    "srv_serror_rate",
+    "su_attempted",
+    "urgent",
+    "wrong_fragment"
+  ],
+  "spearman_rho": -0.3916,
+  "spearman_p": 0.0294
+}
